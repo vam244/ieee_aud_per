@@ -1,0 +1,110 @@
+body {
+	background-color: rgb(4, 4, 41);
+	overflow-x: hidden;
+}
+#home {
+	text-align: center;
+}
+#home nav {
+	background-color: transparent;
+}
+.container {
+	color: white;
+}
+#home .desc {
+	color: rgb(202, 202, 202);
+	padding-top: 15vh;
+}
+#home .desc a {
+	font-size: 16px;
+	text-decoration: none;
+	color: rgb(255, 125, 0);
+}
+canvas {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	height: 100vh;
+	width: 100vw;
+}
+#home {
+	min-height: 100vh;
+	background: linear-gradient(transparent 40%, #040429 60%);
+}
+#home .stat-box {
+	margin: 25px 0px;
+}
+#home .stat-box > .d-flex {
+	justify-content: space-evenly;
+	margin: 5px 0;
+}
+#home .stat-box > .d-flex .stat {
+	padding: 10px;
+	border-radius: 10px;
+}
+#home .stat-box > .d-flex .stat p {
+	margin: 0;
+}
+#home .stat {
+	background-color: #0066ff23;
+}
+#home button {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	margin-top: 5vh;
+}
+#home button a,
+#home #sign-in-btn {
+	font-size: 24px;
+	color: white;
+	outline: none;
+	background: linear-gradient(
+		270deg,
+		rgba(41, 33, 137, 0.75) 19.28%,
+		rgba(0, 178, 255, 0.4875) 91.97%
+	);
+	border-radius: 10px;
+	border: 2px solid cyan;
+	padding: 10px 50px;
+	text-decoration: none !important;
+	color: white !important;
+}
+#home button a:hover,
+#home #sign-in-btn:hover {
+	box-shadow: 2px 2px 20px rgba(0, 255, 255, 0.603);
+}
+
+.head {
+	margin-top: 2vh;
+}
+
+@media screen and (min-width: 768px) {
+	canvas {
+		left: 25%;
+	}
+	#home {
+		background: linear-gradient(transparent 40%, #040429);
+	}
+	#home .desc {
+		font-size: 24px;
+		padding-top: 0;
+		margin-top: 40px;
+	}
+	#home .stat-box {
+		font-size: 24px;
+		margin-top: 5vh;
+	}
+	#home .stat-box > .d-flex .stat {
+		padding: 15px;
+	}
+	#home .stat-box > .d-flex {
+		margin: 25px;
+	}
+	#home button {
+		margin-top: 10vh;
+	}
+}
