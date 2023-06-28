@@ -7,21 +7,21 @@ import { useNavigate } from "react-router-dom";
 import "./Landing.css";
 
 const Landing = () => {
-  const [signed_in, setSigned_in] = useState(false);
-  const auth = getAuth();
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      setSigned_in(true);
-    } else {
-      setSigned_in(false);
-    }
-  });
+  // const [signed_in, setSigned_in] = useState(false);
+  // const auth = getAuth();
+  // onAuthStateChanged(auth, (user) => {
+  //   if (user) {
+  //     setSigned_in(true);
+  //   } else {
+  //     setSigned_in(false);
+  //   }
+  // });
 
-  let navigate = useNavigate();
-  const redirect = () => {
-    let path = localStorage.getItem("Submitted") === "1" ? "/success" : "/reg";
-    navigate(path);
-  };
+  // let navigate = useNavigate();
+  // const redirect = () => {
+  //   let path = localStorage.getItem("Submitted") === "1" ? "/success" : "/reg";
+  //   navigate(path);
+  // };
 
   return (
     <>
@@ -86,8 +86,8 @@ const Landing = () => {
                   </div>
                 </div>
               </div>
-              {signed_in ? (
-                redirect()):
+            {/* {signed_in ? ( */}
+               {/* // redirect()):
 //                 <button>
 //                   <Link
 //                     to={
@@ -100,18 +100,19 @@ const Landing = () => {
 //                   </Link>
 //                 </button>
               (
-                <button
-                  id="sign-in-btn"
-                  onClick={() => {
-                    Auth();
-                  }}
-                >
+              
                   Register
                 </button>
               )} 
               {/* <div className="mt-2 p-3 ">
 								<h3>Audition registration has been closed!</h3>
 							</div> */}
+                <button
+                  
+
+                >
+                  <Link to='/reg'>register</Link>
+                  </button>
             </div>
           </div>
         </div>
